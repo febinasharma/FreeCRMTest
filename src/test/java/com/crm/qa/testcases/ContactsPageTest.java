@@ -1,5 +1,8 @@
 package com.crm.qa.testcases;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -34,11 +37,11 @@ public class ContactsPageTest extends TestBase{
 		//contactsPage=new ContactsPage();
 		loginPage=new LoginPage();
 		testUtil=new TestUtil();
-		homePage=new HomePage();
-		contactsPage=new ContactsPage();
+//		homePage=new HomePage();
+//		contactsPage=new ContactsPage();
 	//	excelReader=new ExcelXLSReader(prop.getProperty("excelFilePath"));
 		homePage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-		testUtil.switchToFrame(prop.getProperty("HomePageMainframe"));
+		
 		
 		
 		
@@ -76,12 +79,28 @@ public class ContactsPageTest extends TestBase{
 //		contactsPage.createNewContact(title,firstName,lastName,compName);
 //	}
 	//***********************
-	@Test(priority=0)
-	public void verifyCreateNewContactTest()
+//	@Test(priority=0)
+//	public void verifyCreateNewContactTest() throws InterruptedException
+//	{
+////		testUtil.switchToFrame(prop.getProperty("HomePageMainframe"));
+//		contactsPage=homePage.clickOnContactLink();
+////		contactsPage.clickOnNewContactsLink();
+//		contactsPage.createNewContact("Ms.","Meera","Varma","Lindt");
+//	}
+	
+	@DataProvider
+	public Iterator<Object[]> getTestData()
 	{
-		contactsPage=homePage.clickOnContactLink();
-		contactsPage.clickOnNewContactsLink();
-		contactsPage.createNewContact("Ms.","Meera","Varma","Lindt");
+		ArrayList<Object[]> data=TestUtil.getDataFromExcelforNewContact();
+		return data.iterator();
+	}
+	
+	@Test(dataProvider="getTestData")
+	public void verifyCreateNewContactsTestUsingDDT(String title, String fName,String lName, String cName) throws InterruptedException
+	{
+		contactsPage=homePage.clickOnNewContactLink();
+		contactsPage.createNewContact(title,fName,lName,cName);
+		
 	}
 	
 	@AfterMethod

@@ -13,6 +13,7 @@ import org.openqa.selenium.support.events.WebDriverListener;
 
 import com.crm.qa.util.TestUtil;
 import com.crm.qa.util.WebEventListener;
+import com.crm.qa.util.Xls_Reader;
 
 public class TestBase {
 	
@@ -38,7 +39,7 @@ public class TestBase {
 		String browserName= prop.getProperty("browser");
 		if(browserName.equals("chrome"))
 		{
-				System.setProperty("webdriver.chrome.driver","C:\\Users\\febin\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver","C:\\Users\\febin\\Downloads\\chromedriver-win64 (2)\\chromedriver-win64\\chromedriver.exe");
 				driver=new ChromeDriver();
 		}
 		
@@ -52,6 +53,8 @@ public class TestBase {
 //        WebDriver decorated = decorator.decorate(driver);
 //        driver=decorated;
 		
+
+
 		driver.get(prop.getProperty("url"));
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();

@@ -60,23 +60,23 @@ public class ContactsPage extends TestBase{
 		driver.findElement(By.xpath("//a[contains(text(),'"+contactName+"')]/../..//input[@type='checkbox']")).click();
 		
 	}
-	public void clickOnNewContactsLink()
-	{
-		try {
-		Actions action = new Actions(driver);
-		//action.moveToElement(contactsLink).build();
-		action.scrollToElement(contactsLink).build();
-		System.out.println("Found Emenet---------");
-		newContactsLink.click();
-		}
-//		catch(InvocationTargetException ite) {
-//			ite.getCause().printStackTrace();
-		catch(Exception e) {
-			e.printStackTrace();
-		}
+//	public void clickOnNewContactsLink()
+//	{
+//		try {
+////		Actions action = new Actions(driver);
+//		//action.moveToElement(contactsLink).build();
+////		action.scrollToElement(contactsLink).build();
+////		System.out.println("Found Emenet---------");
+////		newContactsLink.click();
+//		}
+////		catch(InvocationTargetException ite) {
+////			ite.getCause().printStackTrace();
+//		catch(Exception e) {
+//			e.printStackTrace();
+//		}
 		
 		
-	}
+//	}
 	public void createNewContact(String title, String ftName, String ltName, String compName)
 	{
 		Select select=new Select(titleSelect);

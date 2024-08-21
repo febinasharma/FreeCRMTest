@@ -34,16 +34,16 @@ public class HomePageTest extends TestBase{
 		testUtil=new TestUtil();
 		loginPage=new LoginPage();
 		homePage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-		
+		testUtil.switchToFrame(prop.getProperty("HomePageMainframe"));
 	}
 	
-	@Test(priority=0)
+	@Test(priority=1, enabled=true)
 	public void userNameLabelTest()
 	{
-		testUtil.switchToFrame(prop.getProperty("HomePageMainframe"));
+		
 		Assert.assertTrue(homePage.verifyUsernameLabel());
 	}
-	@Test(priority=1)
+	@Test(priority=0, enabled=true)
 	public void homePageTitleTest()
 	{
 		String homePageTitle=homePage.verifyPageTitle();
@@ -51,9 +51,9 @@ public class HomePageTest extends TestBase{
 	}
 	
 	@Test (priority =2)
-	public void contactsPageLink()
+	public void contactsPageLink() throws InterruptedException
 	{
-		testUtil.switchToFrame(prop.getProperty("HomePageMainframe"));
+		//testUtil.switchToFrame(prop.getProperty("HomePageMainframe"));
 		contactsPage=homePage.clickOnContactLink();
 	}
 	
