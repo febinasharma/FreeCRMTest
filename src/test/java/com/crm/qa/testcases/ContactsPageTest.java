@@ -3,6 +3,7 @@ package com.crm.qa.testcases;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -30,28 +31,21 @@ public class ContactsPageTest extends TestBase{
 		
 	}
 	
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true)
 	public void setup()
 	{
 	    initialization();
-		//contactsPage=new ContactsPage();
 		loginPage=new LoginPage();
 		testUtil=new TestUtil();
-//		homePage=new HomePage();
-//		contactsPage=new ContactsPage();
-	//	excelReader=new ExcelXLSReader(prop.getProperty("excelFilePath"));
-		homePage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-		
-		
-		
+		homePage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));		
 		
 	}
 	
-//	@Test(priority=1)
-//	public void verifyContactsPageLabelTest()
-//	{
-//		Assert.assertTrue(contactsPage.verifyContactsPageLabel(),"Contacts label is missing on Contacts Page");
-//	}
+	@Test(priority=1, enabled=false)
+	public void verifyContactsPageLabelTest()
+	{
+		Assert.assertTrue(contactsPage.verifyContactsPageLabel(),"Contacts label is missing on Contacts Page");
+	}
 //	
 //	@Test(priority=0)
 //	public void verifySelectingSingleContactsTest()
@@ -95,7 +89,7 @@ public class ContactsPageTest extends TestBase{
 		return data.iterator();
 	}
 	
-	@Test(dataProvider="getTestData")
+	@Test(dataProvider="getTestData", groups= {"contacts","smoke"})
 	public void verifyCreateNewContactsTestUsingDDT(String title, String fName,String lName, String cName) throws InterruptedException
 	{
 		contactsPage=homePage.clickOnNewContactLink();
@@ -103,7 +97,7 @@ public class ContactsPageTest extends TestBase{
 		
 	}
 	
-	@AfterMethod
+	@AfterMethod(alwaysRun=true)
 	public void tearDown()
 	{
 	driver.quit();

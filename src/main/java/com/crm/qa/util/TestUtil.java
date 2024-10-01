@@ -15,7 +15,7 @@ public class TestUtil extends TestBase{
 	public static final long PAGE_LOAD_TIMEOUT = 20;
 	//public static long PAGE_LOAD_TIMEOUT=20;
 	public static long IMPLICIT_WAIT=10;
-	public static String TESTDATA_SHEET_PATH="C:\\Users\\febin\\eclipse-workspace\\CRMTest\\src\\main\\java\\com\\crm\\qa\\testdata\\FreeCRMTestData.xls";
+	public static String TESTDATA_SHEET_PATH="C:\\Users\\febin\\eclipse-workspace\\CRMTest\\src\\main\\java\\com\\crm\\qa\\testdata\\FreeCRMTestData.xlsx";
 	static Xls_Reader reader;
 
 // Method to switch frame	

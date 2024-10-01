@@ -17,33 +17,33 @@ public class LoginPageTest extends TestBase{
 		super();
 	}
 	
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void setUp()
 	{
 		initialization();
 		loginPage = new LoginPage();		
 	}
 	
-	@Test(priority=1)
+	@Test(groups={"login"},priority=1)
 	
 	public void loginPagetitleTest()
 	{
 		String title=loginPage.validateLoginPageTitle();
 		Assert.assertEquals(title, "Free CRM software for customer relationship management, sales, and support.");
 	}
-	@Test(priority=0)
+	@Test(groups={"login","lg02"},priority=0)
 	public void crmLogoImageTest()
 	{
 		boolean flag= loginPage.validateCRMImg();
 		Assert.assertTrue(flag);
 	}
-	@Test(priority=2)
+	@Test(groups={"smoke","login"},priority=2)
 	public void loginTest()
 	{
 		homePage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
 	
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void tearDown()
 	{
 		driver.quit();

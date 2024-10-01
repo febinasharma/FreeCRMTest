@@ -27,7 +27,7 @@ public class HomePageTest extends TestBase{
 		super();
 	}
 	
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true)
 	public void setup()
 	{
 		initialization();
@@ -37,27 +37,27 @@ public class HomePageTest extends TestBase{
 		testUtil.switchToFrame(prop.getProperty("HomePageMainframe"));
 	}
 	
-	@Test(priority=1, enabled=true)
+	@Test(priority=1, enabled=true, groups= {"home"})
 	public void userNameLabelTest()
 	{
 		
 		Assert.assertTrue(homePage.verifyUsernameLabel());
 	}
-	@Test(priority=0, enabled=true)
+	@Test(priority=0, enabled=true, groups= {"home","smoke"})
 	public void homePageTitleTest()
 	{
 		String homePageTitle=homePage.verifyPageTitle();
 		Assert.assertEquals(homePageTitle, "CRMPRO","Home Page tile not matched");
 	}
 	
-	@Test (priority =2)
+	@Test (priority =2, groups= {"home"})
 	public void contactsPageLink() throws InterruptedException
 	{
 		//testUtil.switchToFrame(prop.getProperty("HomePageMainframe"));
 		contactsPage=homePage.clickOnContactLink();
 	}
 	
-	@AfterMethod
+	@AfterMethod(alwaysRun=true)
 	public void teardown()
 	{
 		driver.quit();
