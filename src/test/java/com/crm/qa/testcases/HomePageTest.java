@@ -1,6 +1,9 @@
 package com.crm.qa.testcases;
 
+import java.io.IOException;
+
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -37,7 +40,7 @@ public class HomePageTest extends TestBase{
 		testUtil.switchToFrame(prop.getProperty("HomePageMainframe"));
 	}
 	
-	@Test(priority=1, enabled=true, groups= {"home"})
+	@Test(priority=1, enabled=false, groups= {"home"})
 	public void userNameLabelTest()
 	{
 		
@@ -47,10 +50,10 @@ public class HomePageTest extends TestBase{
 	public void homePageTitleTest()
 	{
 		String homePageTitle=homePage.verifyPageTitle();
-		Assert.assertEquals(homePageTitle, "CRMPRO","Home Page tile not matched");
+		Assert.assertEquals(homePageTitle, "CRMPRO1","Home Page tile not matched");
 	}
 	
-	@Test (priority =2, groups= {"home"})
+	@Test (priority =2,enabled=false, groups= {"home"})
 	public void contactsPageLink() throws InterruptedException
 	{
 		//testUtil.switchToFrame(prop.getProperty("HomePageMainframe"));

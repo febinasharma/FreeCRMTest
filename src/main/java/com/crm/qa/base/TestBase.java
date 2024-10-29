@@ -8,6 +8,7 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.openqa.selenium.support.events.WebDriverListener;
 
@@ -39,29 +40,22 @@ public class TestBase {
 		String browserName= prop.getProperty("browser");
 		if(browserName.equals("chrome"))
 		{
-				System.setProperty("webdriver.chrome.driver","C:\\Drivers\\chromedriver-win64 (3)\\chromedriver-win64\\chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\src\\main\\resource\\Drivers\\chromedriver.exe");
 				driver=new ChromeDriver();
 		}
-		
+
 	//Event Listener code
 		
 		eventListener=new WebEventListener();
 		driver = new EventFiringDecorator<WebDriver>(eventListener).decorate(driver);
 		
 		
-//        EventFiringDecorator<WebDriver> decorator = new EventFiringDecorator<>(eventListener); //Pass listener to constructor
-//        WebDriver decorated = decorator.decorate(driver);
-//        driver=decorated;
-		
-
-
 		driver.get(prop.getProperty("url"));
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(TestUtil.PAGE_LOAD_TIMEOUT));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TestUtil.IMPLICIT_WAIT));
 		
-		//driver.get(prop.getProperty("url"));
 		
 		
 	}

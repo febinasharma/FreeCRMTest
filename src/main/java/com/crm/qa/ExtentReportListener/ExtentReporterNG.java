@@ -1,6 +1,7 @@
 package com.crm.qa.ExtentReportListener;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -11,14 +12,17 @@ import org.testng.IResultMap;
 import org.testng.ISuite;
 import org.testng.ISuiteResult;
 import org.testng.ITestContext;
+import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.xml.XmlSuite;
 
+import com.crm.qa.base.TestBase;
+import com.crm.qa.util.TestUtil;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class ExtentReporterNG implements IReporter {
+public class ExtentReporterNG extends TestBase implements IReporter,ITestListener {
 	private ExtentReports extent;
 
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites,
@@ -41,7 +45,17 @@ public class ExtentReporterNG implements IReporter {
 		extent.flush();
 		extent.close();
 	}
-
+	
+	
+//    public void onTestFailure(ITestResult result) throws IOException
+//    {
+//		TestUtil.takeScreenshotAtEndOfTest();
+//    }
+//public void onTestFailure() throws IOException
+//{
+//	TestUtil.takeScreenshotAtEndOfTest();
+//}
+	
 	private void buildTestNodes(IResultMap tests, LogStatus status) {
 		ExtentTest test;
 
@@ -71,5 +85,53 @@ public class ExtentReporterNG implements IReporter {
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTimeInMillis(millis);
 		return calendar.getTime();
+	}
+
+
+	@Override
+	public void onTestStart(ITestResult result) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void onTestSuccess(ITestResult result) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void onTestFailure(ITestResult result) {
+
+	}
+
+
+	@Override
+	public void onTestSkipped(ITestResult result) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void onStart(ITestContext context) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void onFinish(ITestContext context) {
+		// TODO Auto-generated method stub
+		
 	}
 }

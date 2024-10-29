@@ -2,11 +2,15 @@ package com.crm.qa.util;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-
+import java.util.Calendar;
+import java.util.Date;
 import org.apache.commons.io.FileUtils;
+//import org.apache.poi.hpsf.Date;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 
 import com.crm.qa.base.TestBase;
 
@@ -22,13 +26,9 @@ public class TestUtil extends TestBase{
 	public void switchToFrame(String frame) {
 		driver.switchTo().frame(frame);
 	}
+
 	
-	public static void takeScreenshotAtEndOfTest() throws IOException{
-		File scrFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		String currentDir= System.getProperty("user.dir");
-		FileUtils.copyFile(scrFile, new File(currentDir+"/screenshots/"+System.currentTimeMillis()+".png"));
-	}
-	
+
 	public static ArrayList<Object[]> getDataFromExcelforNewContact()
 	{
 		ArrayList<Object[]> myData=new ArrayList<Object[]>();
@@ -52,4 +52,23 @@ public class TestUtil extends TestBase{
 		return myData;
 		
 	}
+	
+	
+//	public static void takeScreenshot(WebDriver driver, String testName) throws IOException {
+//	Date date=new Date();
+//	String datetoString=date.toString();
+//	datetoString=datetoString.replace(":", "_").replace(" ", "_");
+//	File srcFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+//	String currentDir=System.getProperty("user.dir");
+//	FileUtils.copyFile(srcFile, new File(currentDir+"/screenshots/"+testName+"_"+System.currentTimeMillis()+datetoString+".png"));
+//}
+	
+//	public static void takeScreenshot(WebDriver driver, String testName) throws IOException
+//	{
+//		Date date=new Date();
+//		String datetoString=date.toString().replace(":", "_").replace(" ", "_");
+//		File srcFile= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+//		String currentDir= System.getProperty("user.dir");
+//		FileUtils.copyFile(srcFile, new File(currentDir+"/screenshots/"+testName+"_"+datetoString+".png"));
+//	}
 }

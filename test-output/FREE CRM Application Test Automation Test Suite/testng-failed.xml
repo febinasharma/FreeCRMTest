@@ -5,30 +5,20 @@
     <listener class-name="com.crm.qa.ExtentReportListener.ExtentReporterNG"/>
   </listeners>
   <test thread-count="5" name="Free CRM App Test Cases(failed)">
+    <groups>
+      <run>
+        <include name="home"/>
+        <include name="smoke"/>
+        <include name="login"/>
+        <exclude name="contacts"/>
+      </run>
+    </groups>
     <classes>
-      <class name="com.crm.qa.testcases.ContactsPageTest">
-        <methods>
-          <include name="verifyCreateNewContactsTestUsingDDT"/>
-          <include name="tearDown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.crm.qa.testcases.ContactsPageTest -->
-      <class name="com.crm.qa.testcases.LoginPageTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="loginTest"/>
-          <include name="loginPagetitleTest"/>
-          <include name="tearDown"/>
-          <include name="crmLogoImageTest"/>
-        </methods>
-      </class> <!-- com.crm.qa.testcases.LoginPageTest -->
       <class name="com.crm.qa.testcases.HomePageTest">
         <methods>
-          <include name="contactsPageLink"/>
           <include name="homePageTitleTest"/>
           <include name="teardown"/>
           <include name="setup"/>
-          <include name="userNameLabelTest"/>
         </methods>
       </class> <!-- com.crm.qa.testcases.HomePageTest -->
     </classes>

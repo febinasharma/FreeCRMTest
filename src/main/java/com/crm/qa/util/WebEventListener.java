@@ -67,15 +67,16 @@ public class WebEventListener implements WebDriverListener {
 	}
 
 	
-	@Override
-	public void onError(Object target, Method method, Object[] args, InvocationTargetException error) {
-		System.out.println("Exception occured onError: " + error);
-		try {
-			TestUtil.takeScreenshotAtEndOfTest();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
+//	@Override
+//	public void onError(Object target, Method method, Object[] args, InvocationTargetException error) {
+//		System.out.println("Exception occured onError: " + error);
+//		try {
+//			String testName= method.getName();
+//			TestUtil.takeScreenshotAtEndOfTest(driver,testName);
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//	}
 
 //	public void onException(Throwable error, WebDriver driver) {
 //		System.out.println("Exception occured: " + error);

@@ -1,10 +1,5 @@
 package com.crm.qa.util;
 
-/**
- * @author Febina
- * Created Date: March, 2023
-
- */
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -55,9 +50,6 @@ public class Xls_Reader {
 	}
 
 	/**
-	 * Code has been updated as per new POI version - 4.x.x
-	 * 
-	 * @author Febina
 	 * @param sheetName
 	 * @param colNum
 	 * @param rowNum
@@ -132,9 +124,6 @@ public class Xls_Reader {
 	}
 
 	/**
-	 * Code has been updated as per new POI version - 4.x.x
-	 * 
-	 * @author Febina
 	 * @param sheetName
 	 * @param colNum
 	 * @param rowNum

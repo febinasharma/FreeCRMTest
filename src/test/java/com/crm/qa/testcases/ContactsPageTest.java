@@ -41,7 +41,7 @@ public class ContactsPageTest extends TestBase{
 		
 	}
 	
-	@Test(priority=1, enabled=false)
+	@Test(priority=1, enabled=false, groups= {"contacts"})
 	public void verifyContactsPageLabelTest()
 	{
 		Assert.assertTrue(contactsPage.verifyContactsPageLabel(),"Contacts label is missing on Contacts Page");

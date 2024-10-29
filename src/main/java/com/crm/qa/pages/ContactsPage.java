@@ -19,10 +19,6 @@ public class ContactsPage extends TestBase{
 	@FindBy (xpath="//td[contains(text(),'Contacts')]")
 	WebElement contactsLabel;
 	
-// Since 'Krishna is hardcoded in this xpath, we cant use @FindBy. Instead use By class within the method	
-//	@FindBy (xpath="//a[contains(text(),'Krishna')]/../..//input[@type='checkbox']")
-//	WebElement checkbox;
-	
 	@FindBy (xpath="//select[@name='title']")
 	WebElement titleSelect;
 	
@@ -60,23 +56,9 @@ public class ContactsPage extends TestBase{
 		driver.findElement(By.xpath("//a[contains(text(),'"+contactName+"')]/../..//input[@type='checkbox']")).click();
 		
 	}
-//	public void clickOnNewContactsLink()
-//	{
-//		try {
-////		Actions action = new Actions(driver);
-//		//action.moveToElement(contactsLink).build();
-////		action.scrollToElement(contactsLink).build();
-////		System.out.println("Found Emenet---------");
-////		newContactsLink.click();
-//		}
-////		catch(InvocationTargetException ite) {
-////			ite.getCause().printStackTrace();
-//		catch(Exception e) {
-//			e.printStackTrace();
-//		}
+	
 		
-		
-//	}
+
 	public void createNewContact(String title, String ftName, String ltName, String compName)
 	{
 		Select select=new Select(titleSelect);
