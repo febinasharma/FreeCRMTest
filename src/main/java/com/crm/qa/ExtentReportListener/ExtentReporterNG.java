@@ -104,7 +104,12 @@ public class ExtentReporterNG extends TestBase implements IReporter,ITestListene
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-
+		try {
+			TestUtil.takeScreenshot(driver, result.getName());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 

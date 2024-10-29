@@ -50,7 +50,7 @@ public class HomePageTest extends TestBase{
 	public void homePageTitleTest()
 	{
 		String homePageTitle=homePage.verifyPageTitle();
-		Assert.assertEquals(homePageTitle, "CRMPRO1","Home Page tile not matched");
+		Assert.assertEquals(homePageTitle, "CRMPRO","Home Page tile not matched");
 	}
 	
 	@Test (priority =2,enabled=false, groups= {"home"})

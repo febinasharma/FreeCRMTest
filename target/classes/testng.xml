@@ -9,7 +9,7 @@
 <groups>
 	<run>
 		<include name="home"></include>
-		<exclude name="contacts"></exclude>
+		<include name="contacts"></include>
 		<include name="smoke"></include>
 		<include name="login"></include>
 	</run>

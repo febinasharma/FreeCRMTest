@@ -26,7 +26,12 @@ public class TestUtil extends TestBase{
 	public void switchToFrame(String frame) {
 		driver.switchTo().frame(frame);
 	}
-
+	public static void takeScreenshot(WebDriver driver, String testName) throws IOException {
+		String datetoString=new Date().toString().replace(":", "_").replace(" ", "_");
+		File srcFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		String currentDir=System.getProperty("user.dir");
+		FileUtils.copyFile(srcFile, new File(currentDir+"/screenshots/"+testName+"_"+datetoString+".png"));
+}
 	
 
 	public static ArrayList<Object[]> getDataFromExcelforNewContact()
@@ -54,14 +59,7 @@ public class TestUtil extends TestBase{
 	}
 	
 	
-//	public static void takeScreenshot(WebDriver driver, String testName) throws IOException {
-//	Date date=new Date();
-//	String datetoString=date.toString();
-//	datetoString=datetoString.replace(":", "_").replace(" ", "_");
-//	File srcFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-//	String currentDir=System.getProperty("user.dir");
-//	FileUtils.copyFile(srcFile, new File(currentDir+"/screenshots/"+testName+"_"+System.currentTimeMillis()+datetoString+".png"));
-//}
+
 	
 //	public static void takeScreenshot(WebDriver driver, String testName) throws IOException
 //	{
