@@ -19,13 +19,14 @@ public class TestUtil extends TestBase{
 	public static final long PAGE_LOAD_TIMEOUT = 20;
 	//public static long PAGE_LOAD_TIMEOUT=20;
 	public static long IMPLICIT_WAIT=10;
-	public static String TESTDATA_SHEET_PATH="C:\\Users\\febin\\eclipse-workspace\\CRMTest\\src\\main\\java\\com\\crm\\qa\\testdata\\FreeCRMTestData.xlsx";
+	public static String TESTDATA_SHEET_PATH="C:\\Users\\febin\\eclipse-workspace\\FreeCRMTest\\src\\main\\java\\com\\crm\\qa\\util\\TestData.xlsx";
 	static Xls_Reader reader;
 
 // Method to switch frame	
 	public void switchToFrame(String frame) {
 		driver.switchTo().frame(frame);
 	}
+// Method to take screenshot	
 	public static void takeScreenshot(WebDriver driver, String testName) throws IOException {
 		String datetoString=new Date().toString().replace(":", "_").replace(" ", "_");
 		File srcFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
@@ -33,22 +34,22 @@ public class TestUtil extends TestBase{
 		FileUtils.copyFile(srcFile, new File(currentDir+"/screenshots/"+testName+"_"+datetoString+".png"));
 }
 	
-
-	public static ArrayList<Object[]> getDataFromExcelforNewContact()
+// Method to access excel data 
+	public static ArrayList<Object[]> getDataFromExcelforNewContact(String sheetName)
 	{
 		ArrayList<Object[]> myData=new ArrayList<Object[]>();
 		try {
-			reader=new Xls_Reader("C:\\Users\\febin\\eclipse-workspace\\FreeCRMTest\\src\\main\\java\\com\\crm\\qa\\util\\TestData.xlsx");
+			reader=new Xls_Reader(TESTDATA_SHEET_PATH);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
 		for(int rowNum=2;rowNum<=reader.getRowCount("newcontact");rowNum++)
 		{
-			String title=reader.getCellData("newcontact", "Title", rowNum);
-			String first_name=reader.getCellData("newcontact", "FirstName", rowNum);
-			String last_name=reader.getCellData("newcontact", "LastName", rowNum);
-			String company_name=reader.getCellData("newcontact", "CompanyName", rowNum);
+			String title=reader.getCellData(sheetName, "Title", rowNum);
+			String first_name=reader.getCellData(sheetName, "FirstName", rowNum);
+			String last_name=reader.getCellData(sheetName, "LastName", rowNum);
+			String company_name=reader.getCellData(sheetName, "CompanyName", rowNum);
 			
 			Object[] ob={title,first_name,last_name,company_name};
 			myData.add(ob);

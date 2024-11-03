@@ -44,7 +44,6 @@
 			<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 				<li class='analysis waves-effect active'><a href='#!' class='test-view' onclick="_updateCurrentStage(0)"><i class='mdi-action-dashboard'></i>Test Details</a></li>
 					<li class='analysis waves-effect'><a href='#!' class='categories-view' onclick="_updateCurrentStage(1)"><i class='mdi-maps-local-offer'></i>Categories</a></li>
-					<li class='analysis waves-effect'><a href='#!' class='exceptions-view' onclick="_updateCurrentStage(2)"><i class='mdi-action-bug-report'></i>Exceptions</a></li>
 				<li class='analysis waves-effect'>
 					<a href='#!' onclick="_updateCurrentStage(-1)" class='dashboard-view'><i class='mdi-action-track-changes'></i></i>Analysis</a>
 				</li>
@@ -55,7 +54,7 @@
 					<i class='mdi-hardware-desktop-windows'></i>
 				</li>
 				<li>
-					<span class='suite-started-time'>2024-10-29 14:55:01</span>
+					<span class='suite-started-time'>2024-11-02 22:13:25</span>
 				</li>
 				<li>
 					<span>v2.41.1</span>
@@ -85,25 +84,25 @@
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-current'> 
 							<span class='panel-name'>Total Time Taken (Current Run)</span> 
-							<span class='suite-total-time-current-value panel-lead'>0h 0m 15s+996ms</span> 
+							<span class='suite-total-time-current-value panel-lead'>0h 0m 49s+596ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-overall'> 
 							<span class='panel-name'>Total Time Taken (Overall)</span> 
-							<span class='suite-total-time-overall-value panel-lead'>0h 0m 15s+996ms</span> 
+							<span class='suite-total-time-overall-value panel-lead'>0h 0m 49s+596ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-start-time'>
 						<div class='card accent green-accent'> 
 							<span class='panel-name'>Start</span> 
-							<span class='panel-lead suite-started-time'>2024-10-29 14:54:45</span> 
+							<span class='panel-lead suite-started-time'>2024-11-02 22:12:36</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-end-time'>
 						<div class='card accent pink-accent'> 
 							<span class='panel-name'>End</span> 
-							<span class='panel-lead suite-ended-time'>2024-10-29 14:55:01</span> 
+							<span class='panel-lead suite-ended-time'>2024-11-02 22:13:25</span> 
 						</div> 
 					</div>
 				</div>
@@ -202,6 +201,11 @@
 									<tbody>
 											<tr>
 												<td>
+													contacts
+												</td>
+											</tr>
+											<tr>
+												<td>
 													home
 												</td>
 											</tr>
@@ -248,6 +252,7 @@
 										<i class='mdi-maps-local-offer'></i>
 									</a>
 									<ul id='category-toggle' class='dropdown-content'>
+											<li class='contacts'><a href='#!'>contacts</a></li>
 											<li class='home'><a href='#!'>home</a></li>
 											<li class='login'><a href='#!'>login</a></li>
 											<li class='smoke'><a href='#!'>smoke</a></li>
@@ -282,23 +287,23 @@
 						<div class='card-panel no-padding-h no-padding-v no-margin-v'>
 							<div class='wrapper'>
 								<ul id='test-collection' class='test-collection'>
-										<li class='collection-item test displayed active pass ' extentid='bf4bd8c1-8404-4aff-a983-43063129d201'>
+										<li class='collection-item test displayed active pass ' extentid='50edc310-0be3-4684-87fc-228318b880ed'>
 											<div class='test-head'>
-												<span class='test-name'>loginTest </span>
+												<span class='test-name'>verifyCreateNewContactsTestUsingDDT </span>
 												<span class='test-status label right outline capitalize pass'>pass</span>
-												<span class='category-assigned hide  smoke login'></span>
+												<span class='category-assigned hide  smoke contacts'></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2024-10-29 14:54:49</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2024-10-29 14:54:53</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 4s+6ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2024-11-02 22:12:57</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2024-11-02 22:13:02</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 5s+822ms</span>
 												</div>
 												<div class='test-desc'></div>
 												<div class='test-attributes'>
 														<div class='categories'>
 																<span class='category text-white'>smoke</span>
-																<span class='category text-white'>login</span>
+																<span class='category text-white'>contacts</span>
 														</div>
 												</div>
 												<div class='test-steps'>
@@ -313,7 +318,7 @@
 														<tbody>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>14:54:53</td>
+																	<td class='timestamp'>22:13:02</td>
 																	<td class='step-details'>Test passed</td>
 																</tr>
 														</tbody>
@@ -323,22 +328,23 @@
 												</div>
 											</div>
 										</li>
-										<li class='collection-item test displayed active pass ' extentid='f89695a5-13ea-4d4f-b3cb-78453ca37d3c'>
+										<li class='collection-item test displayed active pass ' extentid='544b3fe0-e91f-47fb-958f-9d03634ce718'>
 											<div class='test-head'>
-												<span class='test-name'>loginPagetitleTest </span>
+												<span class='test-name'>verifyCreateNewContactsTestUsingDDT </span>
 												<span class='test-status label right outline capitalize pass'>pass</span>
-												<span class='category-assigned hide  login'></span>
+												<span class='category-assigned hide  smoke contacts'></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2024-10-29 14:54:45</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2024-10-29 14:54:45</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+22ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2024-11-02 22:13:18</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2024-11-02 22:13:24</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 5s+751ms</span>
 												</div>
 												<div class='test-desc'></div>
 												<div class='test-attributes'>
 														<div class='categories'>
-																<span class='category text-white'>login</span>
+																<span class='category text-white'>smoke</span>
+																<span class='category text-white'>contacts</span>
 														</div>
 												</div>
 												<div class='test-steps'>
@@ -353,7 +359,7 @@
 														<tbody>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>14:54:45</td>
+																	<td class='timestamp'>22:13:24</td>
 																	<td class='step-details'>Test passed</td>
 																</tr>
 														</tbody>
@@ -363,17 +369,17 @@
 												</div>
 											</div>
 										</li>
-										<li class='collection-item test displayed active fail ' extentid='affe8c8b-ddaa-4382-b3e6-870658ea69f2'>
+										<li class='collection-item test displayed active pass ' extentid='819150dd-964c-423f-b3bb-d24e8a8c55ed'>
 											<div class='test-head'>
 												<span class='test-name'>homePageTitleTest </span>
-												<span class='test-status label right outline capitalize fail'>fail</span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
 												<span class='category-assigned hide  smoke home'></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2024-10-29 14:55:00</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2024-10-29 14:55:00</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+13ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2024-11-02 22:12:51</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2024-11-02 22:12:51</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+7ms</span>
 												</div>
 												<div class='test-desc'></div>
 												<div class='test-attributes'>
@@ -393,44 +399,131 @@
 														</thead>
 														<tbody>
 																<tr>
-																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
-																	<td class='timestamp'>14:55:00</td>
-																	<td class='step-details'><pre>java.lang.AssertionError: Home Page tile not matched expected [CRMPRO1] but found [CRMPRO]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at com.crm.qa.testcases.HomePageTest.homePageTitleTest(HomePageTest.java:53)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></td>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>22:12:51</td>
+																	<td class='step-details'>Test passed</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='eebe801e-3218-4122-83b3-1b31869bfc13'>
+											<div class='test-head'>
+												<span class='test-name'>verifyCreateNewContactsTestUsingDDT </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide  smoke contacts'></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2024-11-02 22:13:10</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2024-11-02 22:13:13</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 3s+198ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+														<div class='categories'>
+																<span class='category text-white'>smoke</span>
+																<span class='category text-white'>contacts</span>
+														</div>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>22:13:13</td>
+																	<td class='step-details'>Test passed</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='3511b44a-9f15-42f0-896e-29d80980a537'>
+											<div class='test-head'>
+												<span class='test-name'>loginPagetitleTest </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide  login'></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2024-11-02 22:12:36</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2024-11-02 22:12:36</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+19ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+														<div class='categories'>
+																<span class='category text-white'>login</span>
+														</div>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>22:12:36</td>
+																	<td class='step-details'>Test passed</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='51331de4-fc16-432f-9386-9b92a2803e1d'>
+											<div class='test-head'>
+												<span class='test-name'>loginTest </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide  smoke login'></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2024-11-02 22:12:39</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2024-11-02 22:12:43</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 4s+106ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+														<div class='categories'>
+																<span class='category text-white'>smoke</span>
+																<span class='category text-white'>login</span>
+														</div>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>22:12:43</td>
+																	<td class='step-details'>Test passed</td>
 																</tr>
 														</tbody>
 													</table>
@@ -488,16 +581,16 @@
 									<ul id='cat-collection' class='cat-collection'>
 											<li class='category-item displayed'>
 												<div class='cat-head'>
-													<span class='category-name'>home</span>
+													<span class='category-name'>contacts</span>
 												</div>
 												<div class='category-status-counts'>
-														<span class='fail label dot'>Fail: 1</span>
+														<span class='pass label dot'>Pass: 3</span>
 												</div>
 												<div class='cat-body'>
 													<div class='category-status-counts'>
 														<div class='button-group'>
-															<a href='#!' class='pass label filter'>Pass <span class='icon'>0</span></a>
-															<a href='#!' class='fail label filter'>Fail <span class='icon'>1</span></a>
+															<a href='#!' class='pass label filter'>Pass <span class='icon'>3</span></a>
+															<a href='#!' class='fail label filter'>Fail <span class='icon'>0</span></a>
 															<a href='#!' class='other label filter'>Others <span class='icon'>0</span></a>
 														</div>
 													</div>
@@ -511,10 +604,55 @@
 																</tr>
 															</thead>
 															<tbody>
-																	<tr class='fail'>
-																		<td>2024-10-29 14:55:00</td>
-																		<td><span class='category-link linked' extentid='affe8c8b-ddaa-4382-b3e6-870658ea69f2'>homePageTitleTest</span></td>
-																		<td><div class='status label capitalize fail'>fail</div></td>
+																	<tr class='pass'>
+																		<td>2024-11-02 22:12:57</td>
+																		<td><span class='category-link linked' extentid='50edc310-0be3-4684-87fc-228318b880ed'>verifyCreateNewContactsTestUsingDDT</span></td>
+																		<td><div class='status label capitalize pass'>pass</div></td>
+																	</tr>
+																	<tr class='pass'>
+																		<td>2024-11-02 22:13:18</td>
+																		<td><span class='category-link linked' extentid='544b3fe0-e91f-47fb-958f-9d03634ce718'>verifyCreateNewContactsTestUsingDDT</span></td>
+																		<td><div class='status label capitalize pass'>pass</div></td>
+																	</tr>
+																	<tr class='pass'>
+																		<td>2024-11-02 22:13:10</td>
+																		<td><span class='category-link linked' extentid='eebe801e-3218-4122-83b3-1b31869bfc13'>verifyCreateNewContactsTestUsingDDT</span></td>
+																		<td><div class='status label capitalize pass'>pass</div></td>
+																	</tr>
+															<tbody>
+														</table>
+													</div>
+												</div> 
+											</li>
+											<li class='category-item displayed'>
+												<div class='cat-head'>
+													<span class='category-name'>home</span>
+												</div>
+												<div class='category-status-counts'>
+														<span class='pass label dot'>Pass: 1</span>
+												</div>
+												<div class='cat-body'>
+													<div class='category-status-counts'>
+														<div class='button-group'>
+															<a href='#!' class='pass label filter'>Pass <span class='icon'>1</span></a>
+															<a href='#!' class='fail label filter'>Fail <span class='icon'>0</span></a>
+															<a href='#!' class='other label filter'>Others <span class='icon'>0</span></a>
+														</div>
+													</div>
+													<div class='cat-tests'>
+														<table class='bordered'>
+															<thead>
+																<tr>
+																	<th>RunDate</th>
+																	<th>Test Name</th>
+																	<th>Status</th>
+																</tr>
+															</thead>
+															<tbody>
+																	<tr class='pass'>
+																		<td>2024-11-02 22:12:51</td>
+																		<td><span class='category-link linked' extentid='819150dd-964c-423f-b3bb-d24e8a8c55ed'>homePageTitleTest</span></td>
+																		<td><div class='status label capitalize pass'>pass</div></td>
 																	</tr>
 															<tbody>
 														</table>
@@ -547,13 +685,13 @@
 															</thead>
 															<tbody>
 																	<tr class='pass'>
-																		<td>2024-10-29 14:54:49</td>
-																		<td><span class='category-link linked' extentid='bf4bd8c1-8404-4aff-a983-43063129d201'>loginTest</span></td>
+																		<td>2024-11-02 22:12:36</td>
+																		<td><span class='category-link linked' extentid='3511b44a-9f15-42f0-896e-29d80980a537'>loginPagetitleTest</span></td>
 																		<td><div class='status label capitalize pass'>pass</div></td>
 																	</tr>
 																	<tr class='pass'>
-																		<td>2024-10-29 14:54:45</td>
-																		<td><span class='category-link linked' extentid='f89695a5-13ea-4d4f-b3cb-78453ca37d3c'>loginPagetitleTest</span></td>
+																		<td>2024-11-02 22:12:39</td>
+																		<td><span class='category-link linked' extentid='51331de4-fc16-432f-9386-9b92a2803e1d'>loginTest</span></td>
 																		<td><div class='status label capitalize pass'>pass</div></td>
 																	</tr>
 															<tbody>
@@ -566,14 +704,13 @@
 													<span class='category-name'>smoke</span>
 												</div>
 												<div class='category-status-counts'>
-														<span class='pass label dot'>Pass: 1</span>
-														<span class='fail label dot'>Fail: 1</span>
+														<span class='pass label dot'>Pass: 5</span>
 												</div>
 												<div class='cat-body'>
 													<div class='category-status-counts'>
 														<div class='button-group'>
-															<a href='#!' class='pass label filter'>Pass <span class='icon'>1</span></a>
-															<a href='#!' class='fail label filter'>Fail <span class='icon'>1</span></a>
+															<a href='#!' class='pass label filter'>Pass <span class='icon'>5</span></a>
+															<a href='#!' class='fail label filter'>Fail <span class='icon'>0</span></a>
 															<a href='#!' class='other label filter'>Others <span class='icon'>0</span></a>
 														</div>
 													</div>
@@ -588,14 +725,29 @@
 															</thead>
 															<tbody>
 																	<tr class='pass'>
-																		<td>2024-10-29 14:54:49</td>
-																		<td><span class='category-link linked' extentid='bf4bd8c1-8404-4aff-a983-43063129d201'>loginTest</span></td>
+																		<td>2024-11-02 22:12:57</td>
+																		<td><span class='category-link linked' extentid='50edc310-0be3-4684-87fc-228318b880ed'>verifyCreateNewContactsTestUsingDDT</span></td>
 																		<td><div class='status label capitalize pass'>pass</div></td>
 																	</tr>
-																	<tr class='fail'>
-																		<td>2024-10-29 14:55:00</td>
-																		<td><span class='category-link linked' extentid='affe8c8b-ddaa-4382-b3e6-870658ea69f2'>homePageTitleTest</span></td>
-																		<td><div class='status label capitalize fail'>fail</div></td>
+																	<tr class='pass'>
+																		<td>2024-11-02 22:13:18</td>
+																		<td><span class='category-link linked' extentid='544b3fe0-e91f-47fb-958f-9d03634ce718'>verifyCreateNewContactsTestUsingDDT</span></td>
+																		<td><div class='status label capitalize pass'>pass</div></td>
+																	</tr>
+																	<tr class='pass'>
+																		<td>2024-11-02 22:12:51</td>
+																		<td><span class='category-link linked' extentid='819150dd-964c-423f-b3bb-d24e8a8c55ed'>homePageTitleTest</span></td>
+																		<td><div class='status label capitalize pass'>pass</div></td>
+																	</tr>
+																	<tr class='pass'>
+																		<td>2024-11-02 22:13:10</td>
+																		<td><span class='category-link linked' extentid='eebe801e-3218-4122-83b3-1b31869bfc13'>verifyCreateNewContactsTestUsingDDT</span></td>
+																		<td><div class='status label capitalize pass'>pass</div></td>
+																	</tr>
+																	<tr class='pass'>
+																		<td>2024-11-02 22:12:39</td>
+																		<td><span class='category-link linked' extentid='51331de4-fc16-432f-9386-9b92a2803e1d'>loginTest</span></td>
+																		<td><div class='status label capitalize pass'>pass</div></td>
 																	</tr>
 															<tbody>
 														</table>
@@ -620,103 +772,6 @@
 			<!-- /categories -->
 			
 			<!-- exceptions -->
-				<div id='exceptions-view' class='row _addedTable hide'>
-					<div class='col _addedCell1'>
-						<div class='contents'>
-							<div class='card-panel heading'>
-								<h5>Defects</h5>
-							</div>
-							<div class='card-panel filters'>
-								<div class='search' alt='Search tests' title='Search tests'>
-									<div class='input-field left'>
-										<input id='searchTests' type='text' class='validate' placeholder='Search tests...'>
-									</div>
-									<a href="#" class='btn-floating btn-small waves-effect waves-light blue lighten-1'>
-										<i class='mdi-action-search'></i>
-									</a>
-								</div>
-							</div>
-							<div class='card-panel no-padding-h no-padding-v'>
-								<div class='wrapper'>
-									<ul id='exception-collection' class='exception-collection'>
-											<li class='exception-item displayed'>
-												<div class='exception-head'>
-													<span class='exception-name'>java.lang.AssertionError</span>
-												</div>
-												<div class='exception-test-count'>
-													<span class='fail label'>1</span>
-												</div>
-												<div class='exception-body'>
-													<div class='exception-tests'>
-														<table class='bordered'>
-															<thead>
-																<tr>
-																	<th>RunDate</th>
-																	<th>Test Name</th>
-																	<th>Exception</th>
-																</tr>
-															</thead>
-															<tbody>
-                                                                   <tr class='fail'>
-                                                                       <td>2024-10-29 14:55:00</td>
-                                                                       <td><span class='exception-link linked' extentid='affe8c8b-ddaa-4382-b3e6-870658ea69f2'>homePageTitleTest</span></td>
-                                                                       <td><pre class='exception-message'>java.lang.AssertionError: Home Page tile not matched expected [CRMPRO1] but found [CRMPRO]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at com.crm.qa.testcases.HomePageTest.homePageTitleTest(HomePageTest.java:53)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></td>
-                                                                   </tr>
-                                                            </tbody>
-														</table>
-													</div>
-												</div> 
-											</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id='exception-details-wrapper' class='col _addedCell2'>
-						<div class='contents'>
-							<div class='card-panel details-view'>
-								<h5 class='exception-name'></h5>
-								<div class='exception-container'>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 			<!-- /exceptions -->
 			
 			<!-- testrunner logs -->

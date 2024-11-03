@@ -48,8 +48,7 @@ public class TestBase {
 		
 		eventListener=new WebEventListener();
 		driver = new EventFiringDecorator<WebDriver>(eventListener).decorate(driver);
-		
-		
+			
 		driver.get(prop.getProperty("url"));
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();

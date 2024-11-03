@@ -51,7 +51,6 @@ public class HomePage extends TestBase{
 		driver.switchTo().frame(prop.getProperty("HomePageMainframe"));
 		Actions action = new Actions(driver);
 		action.moveToElement(contactsLink).build().perform();
-//		Thread.sleep(3000);
 //		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 //    	WebElement newContacts=wait.until(ExpectedConditions.elementToBeClickable(newContactsLink));
 //    	newContacts.click();

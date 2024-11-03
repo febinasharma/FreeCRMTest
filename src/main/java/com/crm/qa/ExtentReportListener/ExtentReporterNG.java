@@ -47,15 +47,6 @@ public class ExtentReporterNG extends TestBase implements IReporter,ITestListene
 	}
 	
 	
-//    public void onTestFailure(ITestResult result) throws IOException
-//    {
-//		TestUtil.takeScreenshotAtEndOfTest();
-//    }
-//public void onTestFailure() throws IOException
-//{
-//	TestUtil.takeScreenshotAtEndOfTest();
-//}
-	
 	private void buildTestNodes(IResultMap tests, LogStatus status) {
 		ExtentTest test;
 

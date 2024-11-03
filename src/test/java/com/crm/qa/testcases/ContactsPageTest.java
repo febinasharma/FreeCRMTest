@@ -10,7 +10,6 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.crm.qa.base.TestBase;
-import com.crm.qa.excelreader.ExcelXLSReader;
 import com.crm.qa.pages.ContactsPage;
 import com.crm.qa.pages.HomePage;
 import com.crm.qa.pages.LoginPage;
@@ -22,8 +21,7 @@ public class ContactsPageTest extends TestBase{
 	HomePage homePage;
 	TestUtil testUtil;
 	ContactsPage contactsPage;
-	ExcelXLSReader excelReader;
-	String sheetName="contacts";
+	String sheetName="newcontact";
 	
 	public ContactsPageTest()
 	{
@@ -46,19 +44,7 @@ public class ContactsPageTest extends TestBase{
 	{
 		Assert.assertTrue(contactsPage.verifyContactsPageLabel(),"Contacts label is missing on Contacts Page");
 	}
-//	
-//	@Test(priority=0)
-//	public void verifySelectingSingleContactsTest()
-//	{
-//		contactsPage.selectContactsByName("Bawish");
-//	}
-//	@Test
-//	public void verifySelectingMultipleContactsTest()
-//	{
-//		contactsPage.selectContactsByName("Krishna");
-//		contactsPage.selectContactsByName("David");
-//	}
-	// **** For Excel data***********
+// **** For Excel data***********
 //	@DataProvider
 //	public Object[][] getTestData()
 //	{
@@ -71,21 +57,12 @@ public class ContactsPageTest extends TestBase{
 //	{
 //		homePage.clickOnNewContactsLink();
 //		contactsPage.createNewContact(title,firstName,lastName,compName);
-//	}
-	//***********************
-//	@Test(priority=0)
-//	public void verifyCreateNewContactTest() throws InterruptedException
-//	{
-////		testUtil.switchToFrame(prop.getProperty("HomePageMainframe"));
-//		contactsPage=homePage.clickOnContactLink();
-////		contactsPage.clickOnNewContactsLink();
-//		contactsPage.createNewContact("Ms.","Meera","Varma","Lindt");
-//	}
+//}
 	
 	@DataProvider
 	public Iterator<Object[]> getTestData()
 	{
-		ArrayList<Object[]> data=TestUtil.getDataFromExcelforNewContact();
+		ArrayList<Object[]> data=TestUtil.getDataFromExcelforNewContact(sheetName);
 		return data.iterator();
 	}
 	
