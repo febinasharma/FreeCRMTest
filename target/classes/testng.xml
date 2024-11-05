@@ -8,10 +8,11 @@
 <test name="Free CRM App Test Cases">
 <groups>
 	<run>
-		<include name="home"></include>
-		<include name="contacts"></include>
-		<include name="smoke"></include>
-		<include name="login"></include>
+		<exclude name="home"></exclude>
+		<exclude name="contacts"></exclude>
+		<exclude name="smoke"></exclude>
+		<exclude name="login"></exclude>
+		<include name="deals"></include>
 	</run>
 </groups>
 <classes>

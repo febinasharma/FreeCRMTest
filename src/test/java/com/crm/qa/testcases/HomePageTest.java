@@ -34,10 +34,10 @@ public class HomePageTest extends TestBase{
 	public void setup()
 	{
 		initialization();
-		testUtil=new TestUtil();
+		//testUtil=new TestUtil();
 		loginPage=new LoginPage();
 		homePage=loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-		testUtil.switchToFrame(prop.getProperty("HomePageMainframe"));
+		TestUtil.switchToFrame(prop.getProperty("HomePageMainframe"));
 	}
 	
 	@Test(priority=1, enabled=false, groups= {"home"})
@@ -60,6 +60,11 @@ public class HomePageTest extends TestBase{
 		contactsPage=homePage.clickOnContactLink();
 	}
 	
+	@Test(priority =2,enabled=false, groups= {"home"})
+	public void verifyNewDealslink()
+	{
+		dealsPage=homePage.clickOnNewDealsLink();
+	}
 	@AfterMethod(alwaysRun=true)
 	public void teardown()
 	{

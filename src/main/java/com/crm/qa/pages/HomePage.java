@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.crm.qa.base.TestBase;
+import com.crm.qa.util.TestUtil;
 
 public class HomePage extends TestBase{
 	
@@ -28,6 +29,9 @@ public class HomePage extends TestBase{
 	
 	@FindBy (xpath="//a[contains(text(),'New Contact')]")
 	WebElement newContactsLink;
+	
+	@FindBy(xpath="//a[contains(.,'New Deal')]")
+	WebElement newDealMenuOption;
 	
 
 	//Initializing the Page Objects
@@ -51,18 +55,7 @@ public class HomePage extends TestBase{
 		driver.switchTo().frame(prop.getProperty("HomePageMainframe"));
 		Actions action = new Actions(driver);
 		action.moveToElement(contactsLink).build().perform();
-//		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-//    	WebElement newContacts=wait.until(ExpectedConditions.elementToBeClickable(newContactsLink));
-//    	newContacts.click();
-//		try
-//		{
 		newContactsLink.click();
-//		}
-//		catch(Exception e)
-//		{
-//			e.printStackTrace();
-//		
-//		}
 		return new ContactsPage();
 	}
 	public ContactsPage clickOnContactLink()
@@ -70,9 +63,11 @@ public class HomePage extends TestBase{
 		contactsLink.click();
 		return new ContactsPage();
 	}
-	public DealsPage clickOnDealsLink()
+	public DealsPage clickOnNewDealsLink()
 	{
-		dealsLink.click();
+		TestUtil.switchToFrame(prop.getProperty("HomePageMainframe"));
+		TestUtil.performMenuAction(dealsLink);
+		newDealMenuOption.click();
 		return new DealsPage();
 	}
 	public TasksPage clickOnTasksLink()

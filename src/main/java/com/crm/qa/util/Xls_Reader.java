@@ -100,13 +100,16 @@ public class Xls_Reader {
 				if (DateUtil.isCellDateFormatted(cell)) {
 					// format in form of M/D/YY
 					double d = cell.getNumericCellValue();
-
+//					System.out.println("Date from Excel retrived in XL method:%%%%%%%%% "+d);
 					Calendar cal = Calendar.getInstance();
 					cal.setTime(DateUtil.getJavaDate(d));
-					cellText = (String.valueOf(cal.get(Calendar.YEAR))).substring(2);
-					cellText = cal.get(Calendar.DAY_OF_MONTH) + "/" + cal.get(Calendar.MONTH) + 1 + "/" + cellText;
+//					System.out.println("Month from Excel retrived in XL method:%%%%%%%%% "+cal.get(Calendar.MONTH));
+					cellText = (String.valueOf(cal.get(Calendar.YEAR))).substring(0);                 
+					cellText = cal.get(Calendar.DAY_OF_MONTH) + "/" + (cal.get(Calendar.MONTH) + 1) + "/" + cellText;
 
 					// System.out.println(cellText);
+					
+
 
 				}
 

@@ -67,7 +67,6 @@ public class ContactsPage extends TestBase{
 		lastName.sendKeys(ltName);
 		company.sendKeys(compName);
 		saveBtn.click();
-		//test
 	}
 
 }
